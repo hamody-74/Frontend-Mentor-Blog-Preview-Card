@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: hsl(0, 0%, 7%);
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background: var(--yellow);
+}
+
+.container {
+  width: 450px;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  min-height: 100px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 30px;
+  border: 2px solid var(--black);
+  box-shadow: 10px 10px;
+}
+
+.container:hover {
+  box-shadow: 15px 15px;
+}
+
+.container img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.container .info {
+  margin-top: 25px;
+}
+
+.container .info .category {
+  display: block;
+  color: var(--black);
+  font-size: 17px;
+  width: fit-content;
+  font-weight: bold;
+  background: var(--yellow);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.container .date {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.container .title > a {
+  color: var(--black);
+  font-weight: 800;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.container .title > a:hover {
+  color: var(--yellow);
+}
+
+.container .description {
+  margin: 20px 0 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  color: hsl(0, 0%, 50%);
+}
+
+.container .author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.container .author img {
+  width: 40px;
+  height: 40px;
+}
+
+.container .author span {
+  font-weight: 800;
+  font-size: 17px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 320px;
+    padding: 15px;
+  }
+
+  .container .info .category {
+    font-size: 14px;
+  }
+
+  .container .info .date {
+    margin: 15px 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .container .info .title > a {
+    font-size: 22px;
+  }
+
+  .container .info .description {
+    font-size: 14px;
+  }
+
+  .container .author > img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .container .author > span {
+    font-size: 15px;
+  }
+}
